@@ -1,0 +1,63 @@
+Story
+- encounter statue of knight with holy grail in its hands: have option to rob holy grail from statue or offer flowers
+- if Galahad robs grail: Lancelot dies in end and Guinevere kills herself
+- else: Lancelot and Guinevere are reunited with Lancelot
+
+Levels
+1. I am Gahalad, knight of the round table, and this is my story.
+
+Years ago, I began hearing the voice of a maiden cry out for help in my dreams. Her cries were accompanied by visions of a forest in a distant, cursed land. I was hesistant to venture out there. But there was something about these dreams I could not ignore. Something familiar. Eventually, I set off to the cursed woods in the south-east. My arrival had disturbed the birds, I could not hide my presence here. But this was the treeline from my nightmares, I was certain...
+
+(Martial Hero)
+
+2. After routing a group of bandits on the outskirts of the woods, I sought to interrogate their chief. What were they doing here? Could they hear her too?
+
+What I heard disturbed me, 'Those who hear the maiden's cries are cursed to follow her voice deeper into the dangers of the forest, as the dark wizard desires...Turn back I urge you!' I, however, was not willing to leave it alone. Besides, not many would miss me if I were to perish, my mother had already abandoned me, and although I am the son of a renowned knight, I had never met my father. For he disapeared before I came of age. I had nothing to lose, so I pressed on...
+
+(Mushroom)
+
+3. As I got deeper into the forest, I began to hear the maiden's voice in my ears. I was not sure if it was hallucination, or she was out there calling to me. I followed that voice, but the further I travelled, the more unnatural the landscape and its inhabitants became...
+
+(Goblin)
+
+4. I was tired. I stopped to rest at a stream when I saw a shadow looming in the corner of my eye. Motionless. I drew my blade and approached carefully. When I got close I realized it was the statue of a knight. I was lifelike and noble, but also sad and heartbroken. I was moved to pay my respects by offering flowers to this idol of what must have been some brave man in life. That is when I saw that it carried an object I have long desired within its stone hands...
+
+(Statue of Lancelot - Hero Knight)
+
+5. Once past the stream, I began to feel the presence of this wizard of whom the bandit chieftan spoke. I had not yet had sight of him, but I could feel it: the scent of foul magics in the air. 
+
+I knew I was hot on his trail when I was confronted by undead abominations, surely summoned by his dark arts.
+
+(Skeleton)
+
+6. There he was! After dispatching his creations, I confronted the dark mage. He had a lady clad in white as his captive. 'This must be the maiden from my dreams,' I was certain! I tossed her my second blade and she managed to cut off his escape. Her strength surprised me. There again was that familiar feeling. But I had no time to waste. I engaged the wizard...
+
+(Evil Wizard)
+
+7. I managed to put an end to the evil wizard who had been draining the forest of its life and beauty. I then turned to the maiden. What she said shook me to my very core. This was Guinevere, wife of King Arthur. She had disappeared on an expedition to the south years ago. Sir Lancelot, my father, and her secret lover, had been sent to find her and never returned! The wizard turned him to stone during their battle in the forest. However, Lady Guinevere had secretly crafted an antidote from the wizard's supplies while she had been held captive! 
+
+(Good ending)
+I was elated. The statue of the noble knight had been my father. Lady Guinevere revived him and we were reunited at last! That is the tale of how I found Lady Guinevere, my father, Sir Lancelot, and the Holy Grail.
+
+(Bad ending)
+'No...It cannot be!' I was devastated. The statue by the stream had been my father. I had damaged it beyond repair but I hoped Lady Guinevere's potion would work to revive him. It did not. He became human only long enough to die with tormented screams over having his body severed in two.
+
+'I will join you my love!' Lady Guinevere could not bear the seperation from her lover and fell on Sir Lancelot's sword, ending her life. Upon seeing this I lost my composure and dropped the Holy Grail into the river, where it was swept off by a great eagle.
+
+That is the tale of how I lost Lady Guinevere, my father, Sir Lancelot, and the Holy Grail.
+
+Misc
+- give attribution to artists for assets in ReadME.md file
+
+TODO----------------------------------------------
+DONE - fix player left position
+DONE -  player health
+DONE - collisions
+DONE - enemy health
+DONE - scene navigation
+DONE - story beats
+DONE - add all enemies (refactor)
+DONE - improve combat (enemy action probabilities + hitboxes + health)
+DONE - npc interaction
+- sound effects + music
+--------------------------------------------------
