@@ -238,18 +238,16 @@ function setupAnimations() {
 
 function showPlayerHealth() {
     strokeWeight(4);
-    for (let i = 0; i < playerMaxHealth; i++) {
-        // boss
-        if (i < playerHealth && playerMaxHealth == 5) fill('gold')
 
-        // regular
-        else if (i < playerHealth && playerMaxHealth == 3) fill ('red')
+    fill('black')
+    rect(30, 30, playerMaxHealth * 25, 20, 5);
 
-        // damaged
-        else fill('black')
+    // boss
+    if (playerMaxHealth == 5) fill('gold')
+    // regular
+    else if (playerMaxHealth == 3) fill ('red')
 
-        circle(30 + i * 25, 30, 20)
-    }
+    if (playerHealth >= 0) rect(30, 30, playerHealth * 25, 20, 5);
 }
 
 function showEnemyHealth() {
@@ -257,19 +255,15 @@ function showEnemyHealth() {
     // NPC (no enemy)
     if (sceneLevel == 3) return
 
-    strokeWeight(4);
-    for (let i = 0; i < enemyMaxHealth[sceneLevel]; i++) {
-        // boss
-        if (i < enemyHealth && playerMaxHealth == 5) fill('purple')
+    fill('black')
+    rect(canvasWidth - (30 +  enemyMaxHealth[sceneLevel] * 25), 30, enemyMaxHealth[sceneLevel] * 25, 20, 5);
 
-        // regular
-        else if (i < enemyHealth && playerMaxHealth == 3) fill('green')
-        
-        // damaged
-        else fill('black')
+    // boss
+    if (playerMaxHealth == 5) fill('purple')
+    // regular
+    else if (playerMaxHealth == 3) fill ('green')
 
-        circle(canvasWidth - (30 + i * 25), 30, 20)
-    }
+    if (enemyHealth >= 0) rect(canvasWidth - (30 +  enemyMaxHealth[sceneLevel] * 25), 30, enemyHealth * 25, 20, 5);
 }
 
 function checkCombat() {
@@ -296,7 +290,8 @@ function checkCombat() {
     if (enemyIsAttacking) {
         // player was hit
         if (playerX + playerWidth / 2 > enemyX[sceneLevel]) {
-            playerHealth -= 1.5 / enemyAttackFrames[sceneLevel]
+            if (playerMaxHealth == 5) playerHealth -= 2.5 / enemyAttackFrames[sceneLevel]
+            else playerHealth -= 1.5 / enemyAttackFrames[sceneLevel]
             background('red')
         }
     }
@@ -337,7 +332,7 @@ function generateEnemyAction() {
     // enemy is far away
     else {
         if (sceneLevel == numLevels -  1) actions = ['left']
-        else actions = ['left', 'left', 'idle']
+        else actions = ['left', 'left', 'left', 'idle', 'idle', 'right']
     }
 
     return random(actions)

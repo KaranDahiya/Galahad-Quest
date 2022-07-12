@@ -99,7 +99,7 @@ let enemyIdleFrames = [10, 4, 4, 1, 4, 8]
 let enemyRunFrames = [8, 8, 8, 1, 4, 8]
 let enemyAttackFrames = [7, 8, 8, 1, 8, 8]
 let enemyDeathFrames = [11, 4, 4, 1, 4, 7]
-let enemyAttackExactFrame = [2, 1, 1, -1, 1, 3]
+let enemyAttackExactFrame = [1, 1, 1, -1, 1, 1]
 let enemyCurrentAction
 let enemyCurrentFrames = 0
 
