@@ -38,14 +38,28 @@ function transitionToLevel() {
             // boss fight incoming
             if (sceneLevel == numLevels - 1) {
                 playerMaxHealth = 5
-                menuTheme.stop()
                 enemyTheme.stop()
-                bossTheme.stop()
+                menuTheme.stop()
+                enemyDeathSound.stop()
+                playerAttackSound.stop()
+                playerDeathSound.stop()
+                playerWalkSound.stop()
+                enemyAttackSound.stop()
+                enemyDeathSound.stop()
+                enemyWalkSound.stop()
+                powerupSound.stop()
                 bossTheme.play()
             } else {
-                menuTheme.stop()
-                enemyTheme.stop()
                 bossTheme.stop()
+                menuTheme.stop()
+                enemyDeathSound.stop()
+                playerAttackSound.stop()
+                playerDeathSound.stop()
+                playerWalkSound.stop()
+                enemyAttackSound.stop()
+                enemyDeathSound.stop()
+                enemyWalkSound.stop()
+                powerupSound.stop()
                 enemyTheme.play()
             }
             

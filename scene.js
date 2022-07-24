@@ -270,12 +270,12 @@ function checkCombat() {
 
     if (playerDied) {
         playerX = 0
-        return
+        return true
     }
 
     if (enemyDied) {
         enemyX[sceneLevel] = canvasWidth
-        return
+        return true
     }
 
     // player attacks
@@ -288,13 +288,18 @@ function checkCombat() {
 
     // enemy attacks
     if (enemyIsAttacking) {
-        // player was hit
-        if (playerX + playerWidth / 2 > enemyX[sceneLevel]) {
-            if (playerMaxHealth == 5) playerHealth -= 2.5 / enemyAttackFrames[sceneLevel]
-            else playerHealth -= 1.5 / enemyAttackFrames[sceneLevel]
+        // player was hit by boss
+        if (playerMaxHealth == 5 && (playerX + enemyWidth / 1.5 > enemyX[sceneLevel])) {
+            playerHealth -= 2 / enemyAttackFrames[sceneLevel]
+        }
+        // player was hit by enemy
+        else if (playerX + playerWidth / 2 > enemyX[sceneLevel]) {
+            playerHealth -= 1.5 / enemyAttackFrames[sceneLevel]
             background('red')
         }
     }
+
+    return false
 }
 
 function transitionToGameOver() {
@@ -304,6 +309,15 @@ function transitionToGameOver() {
         gameMode = 'gameover'
         enemyTheme.stop()
         bossTheme.stop()
+        menuTheme.stop()
+        enemyDeathSound.stop()
+        playerAttackSound.stop()
+        playerDeathSound.stop()
+        playerWalkSound.stop()
+        enemyAttackSound.stop()
+        enemyDeathSound.stop()
+        enemyWalkSound.stop()
+        powerupSound.stop()
     }
 }
 
@@ -315,8 +329,14 @@ function transitionToStory() {
         gameMode = 'story'
         enemyTheme.stop()
         bossTheme.stop()
-        menuTheme.stop()
         enemyDeathSound.stop()
+        playerAttackSound.stop()
+        playerDeathSound.stop()
+        playerWalkSound.stop()
+        enemyAttackSound.stop()
+        enemyDeathSound.stop()
+        enemyWalkSound.stop()
+        powerupSound.stop()
         menuTheme.play()   
     }
 }

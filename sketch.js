@@ -10,6 +10,7 @@ let secularFont
 let startTime
 let startTimeSound
 let numLevels = 6
+let transitioning = false
 
 // story variables
 let badEnding = false
@@ -211,13 +212,19 @@ function draw() {
             showEnemy()
 
             // calculate combat information
-            checkCombat()
+            if (checkCombat() && !transitioning) {
+                // prepare for transition
+                transitioning = true
+                timeElapsed = 0
+                startTime = millis()
+            }
 
             // NPC interaction
             handleInteraction()
 
             // if combat ends (let death animations play out)
-            if (timeElapsed > 3000) {
+            if (timeElapsed > 3000 && transitioning) {
+                transitioning = false
                 transitionToGameOver()
                 transitionToStory()
                 startTime = millis()
