@@ -11,4 +11,4 @@ Game I made for ENGL 208A - Forms of Fantasy. It's a very simple proof of concep
 - CSS
 
 ## Demo
-[Click to play the finished project] (https://editor.p5js.org/KaranDahiya/full/rfJqRJ_Re)
+[Click to play the finished project](https://editor.p5js.org/KaranDahiya/full/rfJqRJ_Re)
